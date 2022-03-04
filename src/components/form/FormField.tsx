@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from "react";
+import { FunctionComponent } from "react";
 import { DateRangeField } from "./DateRangeField";
 import { FieldDefinition } from "./form";
 import { InputField } from "./InputField";
@@ -20,7 +20,6 @@ export const FormField: FunctionComponent<Props> = ({ field }) => {
     case "select":
       return <SelectField field={field}></SelectField>;
   }
-  return null;
 };
 
 FormField.displayName = "FormField";

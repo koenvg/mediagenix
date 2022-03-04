@@ -1,8 +1,7 @@
-import React, { FunctionComponent } from "react";
+import { FunctionComponent } from "react";
 import { fetchEvents } from "../../api/eventApi";
 import { useQuery } from "react-query";
 import { Table, Tag } from "antd";
-import { renderDate } from "../../components/renderDate";
 import { EventType } from "../../api/eventApi";
 
 const { Column } = Table;
@@ -19,6 +18,13 @@ const renderType = (type: EventType) => {
       return <Tag color="blue">Holiday</Tag>;
   }
 };
+
+const formatter = Intl.DateTimeFormat();
+
+const renderDate = (date: Date) => {
+  return <span>{formatter.format(date)}</span>;
+};
+
 export const EventTable: FunctionComponent<Props> = () => {
   const { data, isFetching } = useEvents();
 

@@ -1,6 +1,6 @@
 import { Datatype } from "@faker-js/faker/datatype";
 import { Button } from "antd";
-import React, { FunctionComponent, useState } from "react";
+import { FunctionComponent, useState } from "react";
 import { useQuery } from "react-query";
 import { fetchEvents } from "../../api/eventApi";
 import { CreateEventDialog } from "./CreateEventDialog";

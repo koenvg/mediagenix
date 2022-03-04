@@ -1,5 +1,5 @@
 import { Form, Select } from "antd";
-import React, { FunctionComponent } from "react";
+import { FunctionComponent } from "react";
 import { SelectDefinition } from "./form";
 import { useField } from "react-final-form";
 

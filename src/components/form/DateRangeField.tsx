@@ -1,6 +1,6 @@
 import { DatePicker, Form } from "antd";
 import { useForm, useFormState } from "react-final-form";
-import React, { FunctionComponent, useEffect } from "react";
+import { FunctionComponent, useEffect } from "react";
 import { RangePickerDefinition } from "./form";
 
 export interface Props {

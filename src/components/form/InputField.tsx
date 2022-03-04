@@ -1,5 +1,5 @@
 import { Form, Input } from "antd";
-import React, { FunctionComponent } from "react";
+import { FunctionComponent } from "react";
 import { useField } from "react-final-form";
 import { TextDefinition } from "./form";
 

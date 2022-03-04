@@ -1,6 +1,6 @@
 import { Form } from "antd";
 import TextArea from "antd/lib/input/TextArea";
-import React, { FunctionComponent } from "react";
+import { FunctionComponent } from "react";
 import { TextareaDefinition } from "./form";
 import { useField } from "react-final-form";
 

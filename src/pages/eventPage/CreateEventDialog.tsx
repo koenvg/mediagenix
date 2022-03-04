@@ -1,5 +1,5 @@
 import Modal from "antd/lib/modal/Modal";
-import React, { FunctionComponent } from "react";
+import { FunctionComponent } from "react";
 import { AutoForm } from "../../components/form/AutoForm";
 import { FieldDefinition } from "../../components/form/form";
 import { Button } from "antd";
@@ -68,8 +68,9 @@ export const CreateEventDialog: FunctionComponent<Props> = ({
   ) => {
     const event = {
       ...values,
-      startDate: values.startDate.toString(),
-      endDate: values.endDate.toString(),
+      // Following lines are there to not make everything crash because field level validation is not implemented
+      startDate: values?.startDate?.toString() || new Date().toString(),
+      endDate: values?.endDate?.toString() || new Date().toString(),
     };
     await mutation.mutateAsync(event);
     form.reset();
@@ -87,9 +88,10 @@ export const CreateEventDialog: FunctionComponent<Props> = ({
           footer={[
             <Button
               form="create-event"
-              key="sumbit"
+              key="submit"
               htmlType="submit"
               type="primary"
+              loading={mutation.isLoading}
             >
               Create event
             </Button>,
